@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} | Home {% endblock %}
+{% block content %}
+
+
+{% include 'partials/_header.html' %}
+
+
+
+
+
+<section class="">
+        <h1 class="w3-center w3-padding w3-hide-small w3-metro-darken w3-jumbo w3-bottombar w3-border-orange w3-margin-bottom"> CONSTRUCTION WORKFORCE </h1>
+        <h1 class="w3-center w3-padding w3-metro-darken w3-hide-large w3-hide-medium w3-bottombar w3-border-orange  w3-margin-bottom"> CONSTRUCTION WORKFORCE </h1>
+        <br><br>
+        {% include 'partials/_fundi.html' %}
+        <br><br>
+</section>
+
+{% include 'partials/_about.html' %}
+{% include 'partials/_belt.html' %}
+{% include 'partials/_listing.html' %}
+{% include 'partials/_ourwork.html' %}
+
+
+{% endblock %}

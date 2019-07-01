@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="services">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-9 pt-5">
+                    {% for about in abouts %}
+                    <h2>{{ about.title }}</h2>
+                    <hr class="pb-4">
+                    <p>{{ about.content|safe }}.</p>
+                    {% endfor %}
+                
+                    <div class="row pt-3">
+                        {% for service in services %}
+                        <div class="col-md-6">
+                            <i class="{{ service.fafa }} fa-2x pb-2 w3-text-red"></i>
+                            <h5>{{ service.title }}</h5>
+                            <p>{{ service.statements|safe }}</p> 
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
