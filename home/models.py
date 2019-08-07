@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 class Topbar(models.Model):
     logo = models.ImageField(upload_to='logo/', blank=True, null=True)
     title = models.CharField(max_length=100)
-    statement = RichTextField(blank=True, null=True)
+    statement = models.CharField(max_length=100, blank=True, null=True)
     reload = models.DateTimeField(default=timezone.now)
     is_published = models.BooleanField(default=True)
     

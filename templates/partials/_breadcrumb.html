@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<ul class="breadcrumb w3-margin-left w3-content w3-win8-crimson">
+    <li><a href="{% url 'fundis' %}">Fundi</a></li>
+   
+</ul>
+
+</body>
+</html>

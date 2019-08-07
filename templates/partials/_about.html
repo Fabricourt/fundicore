@@ -11,13 +11,14 @@
                     <p>{{ about.content|safe }}.</p>
                     {% endfor %}
                 
-                    <div class="row pt-3">
+                    <div class="w3-margin-left row">
                         {% for service in services %}
-                        <div class="col-md-6">
+                        <div class="col-md-12  w3-margin-left">
                             <i class="{{ service.fafa }} fa-2x pb-2 w3-text-red"></i>
                             <h5>{{ service.title }}</h5>
                             <p>{{ service.statements|safe }}</p> 
                         </div>
+                        
                         {% endfor %}
                     </div>
                 </div>

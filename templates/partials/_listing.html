@@ -11,10 +11,10 @@
                 {% for post in posts %}
                 <div class="col-md-4 w3-margin-bottom" style="height:365;">
                     <header class="w3-metro-darken w3-topbar w3-border-orange">
-                    <h5 class="w3-text-orange text-center" style="height:50px;">{{ post.title }}</h5>
-                    <img src="{{ post.pic_url }}" style="height:230px;">
+                    <h5 class="w3-text-orange text-center" style="height:50px;">{{ post.title|capfirst }}</h5>
+                    <img src="{{ post.pic_url }}" style="height:230px; width:100%">
                     </header>
-                    <p class="pt-3"> {{ post.content|safe }}...</p>
+                    <p class="pt-3"> {{ post.content|safe|slice:200 }}...</p>
                     <a href="{% url 'post-detail' post.id %}" class="w3-text-red">Learn More</a>
                 </div>
                 {% endfor %}
